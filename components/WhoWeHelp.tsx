@@ -116,9 +116,9 @@ export default function WhoWeHelp() {
             Our Specialties
           </div>
           <h2 className="text-3xl sm:text-5xl lg:text-7xl font-light text-gray-900 mb-6 sm:mb-8 tracking-tight leading-[0.9] px-4">
-            Who We <span className="font-medium bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Rescue</span>
+            Our <span className="font-medium bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Clients</span>
           </h2>
-          <p className="text-lg sm:text-xl text-gray-500 max-w-2xl mx-auto font-light px-4">
+          <p className="text-lg sm:text-xl text-gray-500 max-w-2xl mx-auto font-medium px-4">
             Every seller type. Every suspension reason. Every impossible case.
           </p>
         </div>

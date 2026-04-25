@@ -168,6 +168,29 @@ export default function FinalCTA() {
         },
     ];
 
+    const suspensionOptions = [
+        {
+            value: "amazon-seller-account-suspended",
+            label: "Amazon seller account suspended",
+            color: "text-red-400",
+        },
+        {
+            value: "ASIN-suspension",
+            label: "ASIN suspension",
+            color: "text-orange-400",
+        },
+        {
+            value: "walmart-account-suspended",
+            label: "Walmart account suspended",
+            color: "text-yellow-400",
+        },
+        {
+            value: "reimbursments",
+            label: "Reimbursments",
+            color: "text-yellow-400",
+        },
+    ];
+
     return (
         <section className="py-12 sm:py-16 lg:py-24 xl:py-32 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
             <div className="absolute inset-0">
@@ -186,7 +209,7 @@ export default function FinalCTA() {
                     </div>
 
                     <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-light text-white mb-4 sm:mb-6 lg:mb-8 tracking-tight leading-[0.9] px-2">
-                        Your Amazon
+                        Your Amazon Account
                         <br />
                         <span className="font-medium bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
                             Reinstatement
@@ -360,21 +383,42 @@ export default function FinalCTA() {
                                         </div>
 
                                         <div>
-                                            <label className="block text-white font-medium mb-2 sm:mb-3 text-left text-sm sm:text-base">
-                                                <i className="ri-error-warning-line mr-2 text-red-400"></i>
-                                                Suspension Reason (if known)
-                                            </label>
-                                            <input
-                                                type="text"
-                                                name="suspensionReason"
-                                                value={
-                                                    formData.suspensionReason
-                                                }
-                                                onChange={handleInputChange}
-                                                className="w-full bg-white/10 backdrop-blur-sm border border-white/30 rounded-xl px-3 sm:px-4 py-3 sm:py-4 text-white placeholder-blue-300 focus:outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 transition-all duration-300 text-sm sm:text-base"
-                                                placeholder="e.g., Account Health, Product Authenticity, Policy Violation"
-                                            />
-                                        </div>
+                                                <label className="block text-white font-medium mb-2 sm:mb-3 text-left text-sm sm:text-base">
+                                                    <i className="ri-alarm-warning-line mr-2 text-yellow-400"></i>
+                                                    Suspension Reason
+                                                </label>
+                                                <div className="relative">
+                                                    <select
+                                                        name="suspensionReason"
+                                                        value={
+                                                            formData.suspensionReason
+                                                        }
+                                                        onChange={
+                                                            handleInputChange
+                                                        }
+                                                        className="w-full bg-white/10 backdrop-blur-sm border border-white/30 rounded-xl px-3 sm:px-4 py-3 sm:py-4 text-white focus:outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 transition-all duration-300 text-sm sm:text-base appearance-none pr-8"
+                                                    >
+                                                        {suspensionOptions.map(
+                                                            (option) => (
+                                                                <option
+                                                                    key={
+                                                                        option.value
+                                                                    }
+                                                                    value={
+                                                                        option.value
+                                                                    }
+                                                                    className="bg-gray-800 text-white"
+                                                                >
+                                                                    {
+                                                                        option.label
+                                                                    }
+                                                                </option>
+                                                            ),
+                                                        )}
+                                                    </select>
+                                                    <i className="ri-arrow-down-s-line absolute right-3 top-1/2 transform -translate-y-1/2 text-blue-300 pointer-events-none"></i>
+                                                </div>
+                                            </div>
 
                                         <div>
                                             <label className="block text-white font-medium mb-2 sm:mb-3 text-left text-sm sm:text-base">

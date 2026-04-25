@@ -1,0 +1,13 @@
+var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/appeal-form/page.js")
+R.c("server/chunks/ssr/[root-of-the-server]__03jod80._.js")
+R.c("server/chunks/ssr/0p7o_next_dist_esm_build_templates_app-page_0~8g9gf.js")
+R.c("server/chunks/ssr/[root-of-the-server]__07yre7p._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__0iduuvf._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__0p.iath._.js")
+R.c("server/chunks/ssr/074s_2026_project_Appeal Partners Website Files_app_not-found_tsx_0l.1-kh._.js")
+R.c("server/chunks/ssr/0p7o_next_dist_client_components_0knyzo1._.js")
+R.c("server/chunks/ssr/0p7o_next_dist_client_components_builtin_unauthorized_0rffwjl.js")
+R.c("server/chunks/ssr/0p7o_next_dist_client_components_builtin_global-error_0a7alja.js")
+R.c("server/chunks/ssr/0027_artners Website Files__next-internal_server_app_appeal-form_page_actions_0rg986a.js")
+R.m(89505)
+module.exports=R.m(89505).exports

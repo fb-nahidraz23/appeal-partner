@@ -1,11 +1,9 @@
-
 import Link from "next/link";
 import { blogPosts } from "@/data/blogs";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
 export default function BlogsPage() {
-
     return (
         <main className="min-h-screen bg-slate-950">
             <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900">
@@ -13,29 +11,7 @@ export default function BlogsPage() {
                     <div className="absolute left-1/4 top-0 h-80 w-80 rounded-full bg-blue-500/10 blur-3xl"></div>
                     <div className="absolute bottom-0 right-1/4 h-72 w-72 rounded-full bg-purple-500/10 blur-3xl"></div>
                 </div>
-
-                {/* Logo in top left with premium styling - Desktop only */}
-                {/* <div className="absolute top-4 left-4 z-30 hidden lg:block">
-                    <div className="flex items-center space-x-3 bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl px-4 py-2.5">
-                        <div className="relative">
-                            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center shadow-2xl overflow-hidden">
-                                <img
-                                    src="https://static.readdy.ai/image/e6422e02a3150375563aeb9e41bc0548/8fd2c099e8bb2b2a0fbbb3c14411f22a.png"
-                                    alt="Appeal Partners"
-                                    className="w-5 h-5 object-contain"
-                                />
-                            </div>
-                            <div className="absolute -top-1 -right-1 w-2 h-2 bg-emerald-400 rounded-full animate-ping"></div>
-                        </div>
-                        <div>
-                            <span className="text-base font-semibold text-white tracking-tight">
-                                Appeal Partners
-                            </span>
-                        </div>
-                    </div>
-                </div> */}
-<Navbar/>
-                
+                <Navbar />
 
                 <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
                     <div className="py-16 sm:py-20 lg:py-24">
@@ -67,7 +43,6 @@ export default function BlogsPage() {
                     </div>
                 </div>
             </section>
-
 
             <section className="relative bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 py-16 sm:py-20">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6">
@@ -109,23 +84,6 @@ export default function BlogsPage() {
                     </div>
                 </div>
             </section>
-
-            {/* <section className="border-t border-white/10 bg-gradient-to-r from-blue-600 to-purple-600 py-16">
-        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
-          <h2 className="text-3xl font-bold text-white sm:text-4xl">
-            Need help with a suspension right now?
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-blue-100">
-            Appeal Partners helps Amazon sellers build strong reinstatement strategies for urgent account and listing issues.
-          </p>
-          <Link
-            href="/appeal-form"
-            className="mt-8 inline-flex rounded-full bg-white px-8 py-4 text-base font-bold text-blue-700 transition hover:scale-105 hover:bg-slate-100"
-          >
-            Start Your Appeal
-          </Link>
-        </div>
-      </section> */}
             <Footer />
         </main>
     );

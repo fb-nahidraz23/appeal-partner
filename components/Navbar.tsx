@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useEffect, useState } from "react";
 
@@ -75,6 +75,15 @@ const Navbar = () => {
                         </span>
                     </div>
                 </div>
+            </div>
+
+            <div className="absolute top-5 right-32 z-40">
+                <a
+                    href="tel:661-605-5819"
+                    className="inline-flex flex-col bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white px-6 py-2 rounded-md font-bold text-sm sm:text-base transition-all duration-300 shadow-xl hover:shadow-blue-500/25 hover:-translate-y-1 transform whitespace-nowrap cursor-pointer"
+                >
+                    <p>+1 661-605-5819</p>
+                </a>
             </div>
 
             {/* Slide-out Menu */}
