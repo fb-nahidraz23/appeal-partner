@@ -252,7 +252,7 @@ export default function FinalCTA() {
                                 <>
                                     <div className="mb-4 sm:mb-6 lg:mb-8 text-center">
                                         <h3 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-white mb-2 sm:mb-3 lg:mb-4">
-                                            Emergency Appeal Process
+                                            Amazon Seller Reinstatement Form
                                         </h3>
                                         <p className="text-blue-200 font-light text-sm sm:text-base">
                                             Complete this form to begin your
@@ -279,10 +279,8 @@ export default function FinalCTA() {
                                                 </label>
                                                 <input
                                                     type="text"
-                                                    name="businessName"
-                                                    value={
-                                                        formData.firstName
-                                                    }
+                                                    name="firstName"
+                                                    value={formData.firstName}
                                                     onChange={handleInputChange}
                                                     required
                                                     className="w-full bg-white/10 backdrop-blur-sm border border-white/30 rounded-xl px-3 sm:px-4 py-3 sm:py-4 text-white placeholder-blue-300 focus:outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 transition-all duration-300 text-sm sm:text-base"
@@ -296,10 +294,8 @@ export default function FinalCTA() {
                                                 </label>
                                                 <input
                                                     type="text"
-                                                    name="businessName"
-                                                    value={
-                                                        formData.lastName
-                                                    }
+                                                    name="lastName"
+                                                    value={formData.lastName}
                                                     onChange={handleInputChange}
                                                     required
                                                     className="w-full bg-white/10 backdrop-blur-sm border border-white/30 rounded-xl px-3 sm:px-4 py-3 sm:py-4 text-white placeholder-blue-300 focus:outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 transition-all duration-300 text-sm sm:text-base"
@@ -383,42 +379,38 @@ export default function FinalCTA() {
                                         </div>
 
                                         <div>
-                                                <label className="block text-white font-medium mb-2 sm:mb-3 text-left text-sm sm:text-base">
-                                                    <i className="ri-alarm-warning-line mr-2 text-yellow-400"></i>
-                                                    Suspension Reason
-                                                </label>
-                                                <div className="relative">
-                                                    <select
-                                                        name="suspensionReason"
-                                                        value={
-                                                            formData.suspensionReason
-                                                        }
-                                                        onChange={
-                                                            handleInputChange
-                                                        }
-                                                        className="w-full bg-white/10 backdrop-blur-sm border border-white/30 rounded-xl px-3 sm:px-4 py-3 sm:py-4 text-white focus:outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 transition-all duration-300 text-sm sm:text-base appearance-none pr-8"
-                                                    >
-                                                        {suspensionOptions.map(
-                                                            (option) => (
-                                                                <option
-                                                                    key={
-                                                                        option.value
-                                                                    }
-                                                                    value={
-                                                                        option.value
-                                                                    }
-                                                                    className="bg-gray-800 text-white"
-                                                                >
-                                                                    {
-                                                                        option.label
-                                                                    }
-                                                                </option>
-                                                            ),
-                                                        )}
-                                                    </select>
-                                                    <i className="ri-arrow-down-s-line absolute right-3 top-1/2 transform -translate-y-1/2 text-blue-300 pointer-events-none"></i>
-                                                </div>
+                                            <label className="block text-white font-medium mb-2 sm:mb-3 text-left text-sm sm:text-base">
+                                                <i className="ri-alarm-warning-line mr-2 text-yellow-400"></i>
+                                                Suspension Reason
+                                            </label>
+                                            <div className="relative">
+                                                <select
+                                                    name="suspensionReason"
+                                                    value={
+                                                        formData.suspensionReason
+                                                    }
+                                                    onChange={handleInputChange}
+                                                    className="w-full bg-white/10 backdrop-blur-sm border border-white/30 rounded-xl px-3 sm:px-4 py-3 sm:py-4 text-white focus:outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 transition-all duration-300 text-sm sm:text-base appearance-none pr-8"
+                                                >
+                                                    {suspensionOptions.map(
+                                                        (option) => (
+                                                            <option
+                                                                key={
+                                                                    option.value
+                                                                }
+                                                                value={
+                                                                    option.value
+                                                                }
+                                                                className="bg-gray-800 text-white"
+                                                            >
+                                                                {option.label}
+                                                            </option>
+                                                        ),
+                                                    )}
+                                                </select>
+                                                <i className="ri-arrow-down-s-line absolute right-3 top-1/2 transform -translate-y-1/2 text-blue-300 pointer-events-none"></i>
                                             </div>
+                                        </div>
 
                                         <div>
                                             <label className="block text-white font-medium mb-2 sm:mb-3 text-left text-sm sm:text-base">

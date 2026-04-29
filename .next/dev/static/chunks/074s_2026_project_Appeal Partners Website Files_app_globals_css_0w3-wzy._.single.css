@@ -397,6 +397,10 @@ img, video {
   right: .75rem;
 }
 
+.right-32 {
+  right: 8rem;
+}
+
 .right-4 {
   right: 1rem;
 }
@@ -457,28 +461,12 @@ img, video {
   top: 11rem;
 }
 
-.top-6 {
-  top: 1.5rem;
-}
-
-.right-20 {
-  right: 5rem;
-}
-
-.right-32 {
-  right: 8rem;
-}
-
-.top-8 {
-  top: 2rem;
-}
-
-.top-7 {
-  top: 1.75rem;
-}
-
 .top-5 {
   top: 1.25rem;
+}
+
+.top-6 {
+  top: 1.5rem;
 }
 
 .-z-10 {
@@ -3912,11 +3900,6 @@ img, video {
   .sm\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
-  }
-
-  .sm\:px-3 {
-    padding-left: .75rem;
-    padding-right: .75rem;
   }
 
   .sm\:pb-6 {
