@@ -111,13 +111,13 @@ export default function FinalCTA() {
                 additionalInfo: formData.additionalInfo,
             };
 
-            const response = await fetch(
-                "https://hooks.zapier.com/hooks/catch/21210663/uegpdxh/",
-                {
-                    method: "POST",
-                    body: JSON.stringify(webhookData),
+            const response = await fetch("https://appeal-partner-backend.vercel.app/api/zapier", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
                 },
-            );
+                body: JSON.stringify(webhookData),
+            });
 
             if (response.ok) {
                 setSubmitted(true);
@@ -131,6 +131,32 @@ export default function FinalCTA() {
             setIsSubmitting(false);
         }
     };
+
+    // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    //     e.preventDefault();
+
+    //     const form = e.currentTarget;
+
+    //     const formDataObj = new FormData(form);
+
+    //     formDataObj.set(
+    //         "urgencyLevel",
+    //         {
+    //             critical: "Critical - Immediate Action Required",
+    //             high: "High - Within 24 Hours",
+    //             medium: "Medium - Within 3 Days",
+    //         }[formData.urgencyLevel],
+    //     );
+
+    //     // Send using browser form submission
+    //     fetch("https://hooks.zapier.com/hooks/catch/21210663/uegpdxh/", {
+    //         method: "POST",
+    //         body: formDataObj,
+    //         mode: "no-cors", // important
+    //     });
+
+    //     setSubmitted(true);
+    // };
 
     const trustIndicators = [
         {

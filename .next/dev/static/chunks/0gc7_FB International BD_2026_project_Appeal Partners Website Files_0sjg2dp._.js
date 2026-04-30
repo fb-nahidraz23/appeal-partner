@@ -4079,8 +4079,11 @@ function FinalCTA() {
                 urgencyLevel: urgencyLabels[formData.urgencyLevel],
                 additionalInfo: formData.additionalInfo
             };
-            const response = await fetch("https://hooks.zapier.com/hooks/catch/21210663/uegpdxh/", {
+            const response = await fetch("https://appeal-partner-backend.vercel.app/api/zapier", {
                 method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
                 body: JSON.stringify(webhookData)
             });
             if (response.ok) {
@@ -4095,6 +4098,26 @@ function FinalCTA() {
             setIsSubmitting(false);
         }
     };
+    // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    //     e.preventDefault();
+    //     const form = e.currentTarget;
+    //     const formDataObj = new FormData(form);
+    //     formDataObj.set(
+    //         "urgencyLevel",
+    //         {
+    //             critical: "Critical - Immediate Action Required",
+    //             high: "High - Within 24 Hours",
+    //             medium: "Medium - Within 3 Days",
+    //         }[formData.urgencyLevel],
+    //     );
+    //     // Send using browser form submission
+    //     fetch("https://hooks.zapier.com/hooks/catch/21210663/uegpdxh/", {
+    //         method: "POST",
+    //         body: formDataObj,
+    //         mode: "no-cors", // important
+    //     });
+    //     setSubmitted(true);
+    // };
     const trustIndicators = [
         {
             icon: "ri-time-line",
@@ -4161,27 +4184,27 @@ function FinalCTA() {
                         className: "absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"
                     }, void 0, false, {
                         fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                        lineNumber: 197,
+                        lineNumber: 223,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"
                     }, void 0, false, {
                         fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                        lineNumber: 198,
+                        lineNumber: 224,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/2 h-1/2 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 rounded-full blur-3xl"
                     }, void 0, false, {
                         fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                        lineNumber: 199,
+                        lineNumber: 225,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                lineNumber: 196,
+                lineNumber: 222,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4196,14 +4219,14 @@ function FinalCTA() {
                                     className: "w-2 h-2 bg-red-400 rounded-full mr-2 sm:mr-3 animate-pulse"
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                    lineNumber: 207,
+                                    lineNumber: 233,
                                     columnNumber: 25
                                 }, this),
                                 "Limited Time: Fast-Track Processing"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                            lineNumber: 206,
+                            lineNumber: 232,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -4212,7 +4235,7 @@ function FinalCTA() {
                                 "Your Amazon Account",
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                    lineNumber: 213,
+                                    lineNumber: 239,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4220,7 +4243,7 @@ function FinalCTA() {
                                     children: "Reinstatement"
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                    lineNumber: 214,
+                                    lineNumber: 240,
                                     columnNumber: 25
                                 }, this),
                                 " ",
@@ -4228,7 +4251,7 @@ function FinalCTA() {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                            lineNumber: 211,
+                            lineNumber: 237,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4236,7 +4259,7 @@ function FinalCTA() {
                             children: "Every minute your account stays suspended, you lose revenue. Every day Amazon keeps your funds locked, your dreams fade. Stop the bleeding. Start the comeback."
                         }, void 0, false, {
                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                            lineNumber: 220,
+                            lineNumber: 246,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4247,7 +4270,7 @@ function FinalCTA() {
                                     children: "Fast-Track Deadline"
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                    lineNumber: 227,
+                                    lineNumber: 253,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4262,12 +4285,12 @@ function FinalCTA() {
                                                         children: String(value).padStart(2, "0")
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                        lineNumber: 237,
+                                                        lineNumber: 263,
                                                         columnNumber: 41
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                    lineNumber: 236,
+                                                    lineNumber: 262,
                                                     columnNumber: 37
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4275,24 +4298,24 @@ function FinalCTA() {
                                                     children: key
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                    lineNumber: 241,
+                                                    lineNumber: 267,
                                                     columnNumber: 37
                                                 }, this)
                                             ]
                                         }, key, true, {
                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                            lineNumber: 232,
+                                            lineNumber: 258,
                                             columnNumber: 33
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                    lineNumber: 230,
+                                    lineNumber: 256,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                            lineNumber: 226,
+                            lineNumber: 252,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4309,7 +4332,7 @@ function FinalCTA() {
                                                     children: "Amazon Seller Reinstatement Form"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                    lineNumber: 254,
+                                                    lineNumber: 280,
                                                     columnNumber: 41
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4317,13 +4340,13 @@ function FinalCTA() {
                                                     children: "Complete this form to begin your fast-track reinstatement"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                    lineNumber: 257,
+                                                    lineNumber: 283,
                                                     columnNumber: 41
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                            lineNumber: 253,
+                                            lineNumber: 279,
                                             columnNumber: 37
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -4336,7 +4359,7 @@ function FinalCTA() {
                                                     children: submitError
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                    lineNumber: 269,
+                                                    lineNumber: 295,
                                                     columnNumber: 45
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4351,14 +4374,14 @@ function FinalCTA() {
                                                                             className: "ri-store-3-line mr-2 text-emerald-400"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                                            lineNumber: 277,
+                                                                            lineNumber: 303,
                                                                             columnNumber: 53
                                                                         }, this),
                                                                         "First Name *"
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                                    lineNumber: 276,
+                                                                    lineNumber: 302,
                                                                     columnNumber: 49
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -4371,13 +4394,13 @@ function FinalCTA() {
                                                                     placeholder: "Enter your first name"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                                    lineNumber: 280,
+                                                                    lineNumber: 306,
                                                                     columnNumber: 49
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                            lineNumber: 275,
+                                                            lineNumber: 301,
                                                             columnNumber: 45
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4389,14 +4412,14 @@ function FinalCTA() {
                                                                             className: "ri-store-3-line mr-2 text-emerald-400"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                                            lineNumber: 292,
+                                                                            lineNumber: 318,
                                                                             columnNumber: 53
                                                                         }, this),
                                                                         "Last Name *"
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                                    lineNumber: 291,
+                                                                    lineNumber: 317,
                                                                     columnNumber: 49
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -4409,19 +4432,19 @@ function FinalCTA() {
                                                                     placeholder: "Enter your last name"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                                    lineNumber: 295,
+                                                                    lineNumber: 321,
                                                                     columnNumber: 49
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                            lineNumber: 290,
+                                                            lineNumber: 316,
                                                             columnNumber: 45
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                    lineNumber: 274,
+                                                    lineNumber: 300,
                                                     columnNumber: 41
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4434,14 +4457,14 @@ function FinalCTA() {
                                                                         className: "ri-mail-line mr-2 text-blue-400"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                                        lineNumber: 310,
+                                                                        lineNumber: 336,
                                                                         columnNumber: 53
                                                                     }, this),
                                                                     "Email Address *"
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                                lineNumber: 309,
+                                                                lineNumber: 335,
                                                                 columnNumber: 49
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -4454,18 +4477,18 @@ function FinalCTA() {
                                                                 placeholder: "your@email.com"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                                lineNumber: 313,
+                                                                lineNumber: 339,
                                                                 columnNumber: 49
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                        lineNumber: 308,
+                                                        lineNumber: 334,
                                                         columnNumber: 45
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                    lineNumber: 307,
+                                                    lineNumber: 333,
                                                     columnNumber: 41
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4480,14 +4503,14 @@ function FinalCTA() {
                                                                             className: "ri-phone-line mr-2 text-purple-400"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                                            lineNumber: 328,
+                                                                            lineNumber: 354,
                                                                             columnNumber: 53
                                                                         }, this),
                                                                         "Phone Number *"
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                                    lineNumber: 327,
+                                                                    lineNumber: 353,
                                                                     columnNumber: 49
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -4500,13 +4523,13 @@ function FinalCTA() {
                                                                     placeholder: "+1 (555) 123-4567"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                                    lineNumber: 331,
+                                                                    lineNumber: 357,
                                                                     columnNumber: 49
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                            lineNumber: 326,
+                                                            lineNumber: 352,
                                                             columnNumber: 45
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4518,14 +4541,14 @@ function FinalCTA() {
                                                                             className: "ri-alarm-warning-line mr-2 text-yellow-400"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                                            lineNumber: 344,
+                                                                            lineNumber: 370,
                                                                             columnNumber: 53
                                                                         }, this),
                                                                         "Urgency Level"
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                                    lineNumber: 343,
+                                                                    lineNumber: 369,
                                                                     columnNumber: 49
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4542,37 +4565,37 @@ function FinalCTA() {
                                                                                     children: option.label
                                                                                 }, option.value, false, {
                                                                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                                                    lineNumber: 360,
+                                                                                    lineNumber: 386,
                                                                                     columnNumber: 65
                                                                                 }, this))
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                                            lineNumber: 348,
+                                                                            lineNumber: 374,
                                                                             columnNumber: 53
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
                                                                             className: "ri-arrow-down-s-line absolute right-3 top-1/2 transform -translate-y-1/2 text-blue-300 pointer-events-none"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                                            lineNumber: 376,
+                                                                            lineNumber: 402,
                                                                             columnNumber: 53
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                                    lineNumber: 347,
+                                                                    lineNumber: 373,
                                                                     columnNumber: 49
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                            lineNumber: 342,
+                                                            lineNumber: 368,
                                                             columnNumber: 45
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                    lineNumber: 325,
+                                                    lineNumber: 351,
                                                     columnNumber: 41
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4584,14 +4607,14 @@ function FinalCTA() {
                                                                     className: "ri-alarm-warning-line mr-2 text-yellow-400"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                                    lineNumber: 383,
+                                                                    lineNumber: 409,
                                                                     columnNumber: 49
                                                                 }, this),
                                                                 "Suspension Reason"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                            lineNumber: 382,
+                                                            lineNumber: 408,
                                                             columnNumber: 45
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4608,31 +4631,31 @@ function FinalCTA() {
                                                                             children: option.label
                                                                         }, option.value, false, {
                                                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                                            lineNumber: 397,
+                                                                            lineNumber: 423,
                                                                             columnNumber: 61
                                                                         }, this))
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                                    lineNumber: 387,
+                                                                    lineNumber: 413,
                                                                     columnNumber: 49
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
                                                                     className: "ri-arrow-down-s-line absolute right-3 top-1/2 transform -translate-y-1/2 text-blue-300 pointer-events-none"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                                    lineNumber: 411,
+                                                                    lineNumber: 437,
                                                                     columnNumber: 49
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                            lineNumber: 386,
+                                                            lineNumber: 412,
                                                             columnNumber: 45
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                    lineNumber: 381,
+                                                    lineNumber: 407,
                                                     columnNumber: 41
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4644,14 +4667,14 @@ function FinalCTA() {
                                                                     className: "ri-file-text-line mr-2 text-cyan-400"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                                    lineNumber: 417,
+                                                                    lineNumber: 443,
                                                                     columnNumber: 49
                                                                 }, this),
                                                                 "Additional Information"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                            lineNumber: 416,
+                                                            lineNumber: 442,
                                                             columnNumber: 45
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -4664,7 +4687,7 @@ function FinalCTA() {
                                                             placeholder: "Briefly describe your situation, timeline, and any urgent factors we should know about..."
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                            lineNumber: 420,
+                                                            lineNumber: 446,
                                                             columnNumber: 45
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4675,13 +4698,13 @@ function FinalCTA() {
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                            lineNumber: 429,
+                                                            lineNumber: 455,
                                                             columnNumber: 45
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                    lineNumber: 415,
+                                                    lineNumber: 441,
                                                     columnNumber: 41
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4699,7 +4722,7 @@ function FinalCTA() {
                                                                             className: "ri-loader-4-line mr-3 animate-spin"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                                            lineNumber: 444,
+                                                                            lineNumber: 470,
                                                                             columnNumber: 61
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4707,7 +4730,7 @@ function FinalCTA() {
                                                                             children: "Processing Emergency Appeal..."
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                                            lineNumber: 445,
+                                                                            lineNumber: 471,
                                                                             columnNumber: 61
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4715,7 +4738,7 @@ function FinalCTA() {
                                                                             children: "Processing..."
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                                            lineNumber: 450,
+                                                                            lineNumber: 476,
                                                                             columnNumber: 61
                                                                         }, this)
                                                                     ]
@@ -4726,7 +4749,7 @@ function FinalCTA() {
                                                                             children: "Start Appeal Process"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                                            lineNumber: 456,
+                                                                            lineNumber: 482,
                                                                             columnNumber: 61
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4734,45 +4757,45 @@ function FinalCTA() {
                                                                             children: "Start Appeal Process"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                                            lineNumber: 460,
+                                                                            lineNumber: 486,
                                                                             columnNumber: 61
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
                                                                             className: "ri-rocket-2-line ml-2 sm:ml-3 group-hover:translate-x-1 transition-transform duration-300"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                                            lineNumber: 464,
+                                                                            lineNumber: 490,
                                                                             columnNumber: 61
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                                lineNumber: 441,
+                                                                lineNumber: 467,
                                                                 columnNumber: 49
                                                             }, this),
                                                             !isSubmitting && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 className: "absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                                lineNumber: 470,
+                                                                lineNumber: 496,
                                                                 columnNumber: 53
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                        lineNumber: 436,
+                                                        lineNumber: 462,
                                                         columnNumber: 45
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                    lineNumber: 435,
+                                                    lineNumber: 461,
                                                     columnNumber: 41
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                            lineNumber: 263,
+                                            lineNumber: 289,
                                             columnNumber: 37
                                         }, this)
                                     ]
@@ -4785,12 +4808,12 @@ function FinalCTA() {
                                                 className: "ri-check-line text-2xl sm:text-3xl lg:text-4xl text-emerald-400"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                lineNumber: 479,
+                                                lineNumber: 505,
                                                 columnNumber: 41
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                            lineNumber: 478,
+                                            lineNumber: 504,
                                             columnNumber: 37
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -4798,7 +4821,7 @@ function FinalCTA() {
                                             children: "Emergency Appeal Submitted!"
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                            lineNumber: 481,
+                                            lineNumber: 507,
                                             columnNumber: 37
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4806,7 +4829,7 @@ function FinalCTA() {
                                             children: "Your case has been prioritized for immediate review. Our Amazon specialists will contact you within 2 hours to begin your fast-track reinstatement process."
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                            lineNumber: 484,
+                                            lineNumber: 510,
                                             columnNumber: 37
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4817,7 +4840,7 @@ function FinalCTA() {
                                                     children: "What happens next:"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                    lineNumber: 491,
+                                                    lineNumber: 517,
                                                     columnNumber: 41
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4827,56 +4850,56 @@ function FinalCTA() {
                                                             children: "• Immediate case priority assignment"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                            lineNumber: 495,
+                                                            lineNumber: 521,
                                                             columnNumber: 45
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             children: "• Expert consultation call within 2 hours"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                            lineNumber: 499,
+                                                            lineNumber: 525,
                                                             columnNumber: 45
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             children: "• Custom appeal strategy development"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                            lineNumber: 503,
+                                                            lineNumber: 529,
                                                             columnNumber: 45
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             children: "• Direct submission to Amazon"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                            lineNumber: 507,
+                                                            lineNumber: 533,
                                                             columnNumber: 45
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                    lineNumber: 494,
+                                                    lineNumber: 520,
                                                     columnNumber: 41
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                            lineNumber: 490,
+                                            lineNumber: 516,
                                             columnNumber: 37
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                    lineNumber: 477,
+                                    lineNumber: 503,
                                     columnNumber: 33
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                lineNumber: 250,
+                                lineNumber: 276,
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                            lineNumber: 249,
+                            lineNumber: 275,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4891,7 +4914,7 @@ function FinalCTA() {
                                             className: `${indicator.icon} text-lg sm:text-xl lg:text-2xl ${indicator.color} mb-1 sm:mb-2 lg:mb-3 block`
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                            lineNumber: 526,
+                                            lineNumber: 552,
                                             columnNumber: 33
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4899,18 +4922,18 @@ function FinalCTA() {
                                             children: indicator.text
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                            lineNumber: 529,
+                                            lineNumber: 555,
                                             columnNumber: 33
                                         }, this)
                                     ]
                                 }, index, true, {
                                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                    lineNumber: 519,
+                                    lineNumber: 545,
                                     columnNumber: 29
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                            lineNumber: 517,
+                            lineNumber: 543,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4925,7 +4948,7 @@ function FinalCTA() {
                                                 className: "ri-alarm-warning-line text-lg sm:text-xl lg:text-2xl text-yellow-400 mr-2 sm:mr-3"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                lineNumber: 539,
+                                                lineNumber: 565,
                                                 columnNumber: 33
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4933,13 +4956,13 @@ function FinalCTA() {
                                                 children: "Critical Window Closing"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                                lineNumber: 540,
+                                                lineNumber: 566,
                                                 columnNumber: 33
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                        lineNumber: 538,
+                                        lineNumber: 564,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Previous$2d$Company$2f$FB__International__BD$2f$2026$2f$project$2f$Appeal__Partners__Website__Files$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4947,35 +4970,35 @@ function FinalCTA() {
                                         children: "Amazon's internal review cycles operate on tight schedules. Missing this window could delay your reinstatement by weeks. Your competitors are already capturing your market share."
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                        lineNumber: 544,
+                                        lineNumber: 570,
                                         columnNumber: 29
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                                lineNumber: 537,
+                                lineNumber: 563,
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                            lineNumber: 536,
+                            lineNumber: 562,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                    lineNumber: 203,
+                    lineNumber: 229,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-                lineNumber: 202,
+                lineNumber: 228,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Documents/Previous-Company/FB International BD/2026/project/Appeal Partners Website Files/components/FinalCTA.tsx",
-        lineNumber: 195,
+        lineNumber: 221,
         columnNumber: 9
     }, this);
 }
